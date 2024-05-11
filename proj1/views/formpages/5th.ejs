@@ -1,0 +1,357 @@
+<% layout("/layout/every.ejs") %>
+<body>
+    
+  <div class="container-fluid" style="background-color: #f7ffff; margin-bottom: 10px;">
+    <div class="container">
+        <div class="row" style="margin-bottom:10px; ">
+            <div class="col-md-8 col-md-offset-2">
+
+                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Indian_Institute_of_Technology%2C_Patna.svg/1200px-Indian_Institute_of_Technology%2C_Patna.svg.png" alt="logo1" class="img-responsive" style="padding-top: 5px; height: 120px; float: left;"> 
+
+                <h3 style="text-align:center;color:#414002!important;font-weight: bold;font-size: 2.5em; margin-top: 3px; font-family: 'Noto Sans', sans-serif;">भारतीय प्रौद्योगिकी संस्थान पटना</h3>
+                <h3 style="text-align:center;color: #414002!important;font-weight: bold;font-family: 'Oswald', sans-serif!important;font-size: 3.5em; margin-top: 0px;">Indian Institute of Technology Patna</h3>
+
+
+            </div>
+
+
+
+        </div>
+        <!-- <h3 style="text-align:center; color: #414002; font-weight: bold;  font-family: 'Fjalla One', sans-serif!important; font-size: 2em;">Application for Academic Appointment</h3> -->
+    </div>
+</div>
+<h3 style="color: #e10425; margin-bottom: 20px; font-size: 30px; font-weight: bold; text-align: center;font-family: 'Noto Serif', serif;" class="blink_me">Application for Faculty Position</h3>
+    <style type="text/css">
+    body {  
+      background-color: rgb(238, 222, 150);
+    }
+    #submit{
+        font-size: 1.6em;
+      }
+    .form-control { margin-bottom: 10px; }
+    .floating-box {
+        display: inline-block;
+        width: 150px;
+        height: 75px;
+        margin: 10px;
+        border: 3px solid #73AD21;  
+    }
+    </style>
+    <style type="text/css">
+    .form-control { margin-bottom: 10px; }
+    label{
+      padding: 0 !important;
+    }
+    
+    span{
+      font-size: 1.45em;
+      font-family: 'Oswald', sans-serif!important;
+      text-align: left!important;
+      padding: 0px 10px 0px 0px!important;
+      font-weight: bold;
+      /*margin-bottom: 20px!important;*/
+      
+    }
+    hr{
+      border-top: 1px solid #025198 !important;
+      border-style: dashed!important;
+      border-width: 1.2px;
+    }
+    .panel-heading{
+      font-size: 1.7em;
+      font-weight: bold;
+      font-family: 'Oswald', sans-serif!important;
+      letter-spacing: .5px;
+    }
+    .btn-primary {
+      padding: 9px;
+    }
+    </style>
+    
+    <a href='https://ofa.iiti.ac.in/facrec_che_2023_july_02/layout'></a>
+    
+    <div class="container">
+      
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-8 well">
+                <form class="form-horizontal" action="/formpages/5" method="POST">
+                <fieldset>
+                  <input type="hidden" value="" />
+                 
+                     <legend>
+                      <div class="row">
+                        <div class="col-md-10">
+                            <h4 style="font-size: 1.6em;">Welcome : <font color="#025198"><strong><%= firstname %>&nbsp;<%= lastname %></strong></font></h4>
+                        </div>
+                        <div class="col-md-2">
+                          <a style="font-size: 1.1em;" href="/logout" class="btn btn-sm btn-success  pull-right">Logout</a>
+                        </div>
+                      </div>
+                    
+                    
+            </legend>
+    
+    <hr color="red">
+    <!-- Membership of Professional Societies -->
+    
+    <h4 style="text-align:center; font-weight: bold; color: #bb39ac;font-size: 3em;">9. Membership of Professional Societies </h4>
+    
+    <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-success">
+    <div class="panel-heading">Fill the Details  &nbsp;&nbsp;&nbsp;<button style="font-size: 0.8em;" type="button" class="btn btn-sm btn-danger" id="add_membership">Add Details</button></div>
+      <div class="panel-body">
+    
+            <table class="table table-bordered">
+                <tbody id="membership">
+                
+                <tr style="font-size: 1.4em;" height="30px">
+                  <th class="col-md-1"> S. No.</th>
+                  <th class="col-md-3"> Name of the Professional Society </th>
+                  <th class="col-md-3"> Membership Status (Lifetime/Annual)</th>
+                  
+                </tr>
+    
+    
+                          </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr color="red">
+    <!-- Professional Training -->
+    
+    <h4 style="text-align:center; font-weight: bold; color: #bb39ac;font-size: 3em;">10. Professional Training </h4>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-success">
+        <div class="panel-heading">Fill the Details  &nbsp;&nbsp;&nbsp;<button style="font-size: 0.8em;" type="button" class="btn btn-sm btn-danger" id="add_more_prog_trg">Add Details</button></div>
+          <div class="panel-body">
+    
+                <table class="table table-bordered">
+                    <tbody id="prof_trg">
+                    
+                    <tr style="font-size: 1.4em;" height="30px">
+                      <th class="col-md-1"> S. No.</th>
+                      <th class="col-md-3"> Type of Training Received </th>
+                      <th class="col-md-3"> Organisation</th>
+                      <th class="col-md-2"> Year</th>
+                      <th class="col-md-2"> Duration (in years & months)</th>
+                      
+                    </tr>
+    
+    
+                                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr color="red">
+    <!-- Award(s) and Recognition(s) -->
+    
+    <h4 style="text-align:center; font-weight: bold; color: #bb39ac;font-size: 3em;">11. Award(s) and Recognition(s)</h4>
+    <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-success">
+    <div class="panel-heading">Fill the Details  &nbsp;&nbsp;&nbsp;<button style="font-size: 0.8em;" type="button" class="btn btn-sm btn-danger" id="add_more_award">Add Details</button></div>
+      <div class="panel-body">
+    
+            <table class="table table-bordered">
+                <tbody id="award">
+                
+                <tr style="font-size: 1.4em;" height="30px">
+                  <th class="col-md-1"> S. No.</th>
+                  <th class="col-md-3"> Name of Award </th>
+                  <th class="col-md-3"> Awarded By</th>
+                  <th class="col-md-2"> Year</th>
+                  
+                </tr>
+    
+    
+                          </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <hr color="red">
+    <h4 style="text-align:center; font-weight: bold; color: #bb39ac;font-size: 3em;">12. Sponsored Projects/ Consultancy Details</h4>
+    <!-- sponsored projects  -->
+    <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-success">
+          <div class="panel-heading">(A) Sponsored Projects &nbsp;&nbsp;&nbsp;<button style="font-size: 0.8em;" type="button" class="btn btn-sm btn-danger" id="add_more_s_proj">Add Details</button></div>
+            <div class="panel-body">
+    
+                  <table class="table table-bordered">
+                      <tbody id="s_proj">
+                      
+                      <tr style="font-size: 1.4em;" height="30px">
+                        <th class="col-md-1"> S. No.</th>
+                        <th class="col-md-2"> Sponsoring Agency </th>
+                        <th class="col-md-2"> Title of Project</th>
+                        <th class="col-md-2"> Sanctioned Amount (&#8377) </th>
+                        <th class="col-md-1"> Period</th>
+                        <th class="col-md-2"> Role </th>
+                        <th class="col-md-2"> Status (Completed/On-going)</th>
+                        
+                      </tr>
+    
+    
+                                      </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+         <!-- Consultancy Details -->
+                 <div class="row">
+                     <div class="col-md-12">
+                       <div class="panel panel-success">
+                       <div class="panel-heading">(B) Consultancy Projects  &nbsp;&nbsp;&nbsp;<button style="font-size: 0.8em;" type="button" class="btn btn-sm btn-danger" id="add_consultancy">Add Details</button></div>
+                         <div class="panel-body">
+    
+                               <table class="table table-bordered">
+                                   <tbody id="consultancy">
+                                   
+                                   <tr style="font-size: 1.4em;" height="30px">
+                                     <th class="col-md-1"> S. No.</th>
+                                     <th class="col-md-3"> Organization </th>
+                                     <th class="col-md-2"> Title of Project</th>
+                                     <th class="col-md-2"> Amount of Grant</th>
+                                     <th class="col-md-1"> Period</th>
+                                     <th class="col-md-2"> Role</th>
+                                     <th class="col-md-2"> Status</th>
+                                     
+                                   </tr>
+    
+    
+                                                                </tbody>
+                               </table>
+                             </div>
+                           </div>
+                         </div>
+    
+                       </div>
+                       
+    
+                       <hr color="red">
+    
+    
+                <!-- Button -->
+    
+                <div class="form-group">
+                  
+                  <div class="col-md-1">
+                    <a style="font-size: 1.4em; background-color: #e10425;" href="/formpages/4" class="btn btn-primary pull-left"><i class="glyphicon glyphicon-fast-backward">Back</i></a>
+                  </div>
+    
+                  <div class="col-md-11">
+                    <button id="submit" type="submit" value="Submit" class="btn btn-success pull-right">SAVE & NEXT</button>
+                    
+                  </div>
+                  
+                </div>
+    
+                <!-- <div class="form-group">
+                  <label class="col-md-5 control-label" for="submit"></label>
+                  <div class="col-md-4">
+                    <button id="submit" type="submit" name="submit" value="Submit" class="btn btn-primary">SUBMIT</button>
+    
+                  </div>
+                </div> -->
+    
+                </fieldset>
+                </form>
+                
+                
+    
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+    <script>
+      // Function to add details for Membership of Professional Societies
+$('#add_membership').click(function() {
+    var rowCount = $('#membership tr').length;
+    var newRow = '<tr>' +
+                 '<td>' + rowCount + '</td>' +
+                 '<td><input type="text" class="form-control" placeholder="Name of Student" name="professional_society_name[]" required></td>' +
+                 '<td><input type="text" class="form-control" placeholder="Lifetime/Annual" name="membership_status[]" required></td>' +
+                 '<td><button type="button" class="btn btn-danger btn-sm remove-row">Remove</button required></td>' +
+                 '</tr>';
+    $('#membership').append(newRow);
+});
+
+// Function to add details for Professional Training
+$('#add_more_prog_trg').click(function() {
+    var rowCount = $('#prof_trg tr').length;
+    var newRow = '<tr>' +
+                 '<td>' + rowCount + '</td>' +
+                 '<td><input type="text" placeholder="Type of Training Received" class="form-control" name="training_type[]" required></td>' +
+                 '<td><input type="text" placeholder="Organisation" class="form-control" name="training_organization[]" required></td>' +
+                 '<td><input type="text" placeholder="Year" class="form-control" name="training_year[]" required></td>' +
+                 '<td><input type="text" placeholder="Duration (in years & months)" class="form-control" name="training_duration[]" required></td>' +
+                 '<td><button type="button" class="btn btn-danger btn-sm remove-row">Remove</button required></td>' +
+                 '</tr>';
+    $('#prof_trg').append(newRow);
+});
+
+// Function to add details for Award(s) and Recognition(s)
+$('#add_more_award').click(function() {
+    var rowCount = $('#award tr').length;
+    var newRow = '<tr>' +
+                 '<td>' + rowCount + '</td>' +
+                 '<td><input type="text" placeholder="Name of Award" class="form-control" name="award_name[]" required></td>' +
+                 '<td><input type="text" placeholder="Awarded By" class="form-control" name="awarded_by[]" required></td>' +
+                 '<td><input type="text" placeholder="Year" class="form-control" name="award_year[]" required></td>' +
+                 '<td><button type="button" class="btn btn-danger btn-sm remove-row">Remove</button required></td>' +
+                 '</tr>';
+    $('#award').append(newRow);
+});
+
+// Function to add details for Sponsored Projects
+$('#add_more_s_proj').click(function() {
+    var rowCount = $('#s_proj tr').length;
+    var newRow = '<tr>' +
+                 '<td>' + rowCount + '</td>' +
+                 '<td><input type="text" placeholder="Sponsoring Agency" class="form-control" name="sponsoring_agency[]" required></td>' +
+                 '<td><input type="text" placeholder="Title of Project" class="form-control" name="project_title[]" required></td>' +
+                 '<td><input type="text" placeholder="Sanctioned Amount (₹)" class="form-control" name="sanctioned_amount[]" required></td>' +
+                 '<td><input type="text" placeholder="Period" class="form-control" name="project_period[]" required></td>' +
+                 '<td><input type="text" placeholder="Role" class="form-control" name="project_role[]" required></td>' +
+                 '<td><input type="text" placeholder="Completed/On-going" class="form-control" name="project_status[]" required></td>' +
+                 '<td><button type="button" class="btn btn-danger btn-sm remove-row">Remove</button required></td>' +
+                 '</tr>';
+    $('#s_proj').append(newRow);
+});
+
+// Function to add details for Consultancy Projects
+$('#add_consultancy').click(function() {
+    var rowCount = $('#consultancy tr').length;
+    var newRow = '<tr>' +
+                 '<td>' + rowCount + '</td>' +
+                 '<td><input type="text" placeholder="Organization" class="form-control" name="consultancy_organization[]" required></td>' +
+                 '<td><input type="text" placeholder="Title of Project" class="form-control" name="consultancy_title[]" required></td>' +
+                 '<td><input type="text" placeholder="Amount of Grant" class="form-control" name="grant_amount[]" required></td>' +
+                 '<td><input type="text" placeholder="Period" class="form-control" name="consultancy_period[]" required></td>' +
+                 '<td><input type="text" placeholder="Role" class="form-control" name="consultancy_role[]" required></td>' +
+                 '<td><input type="text" placeholder="Status" class="form-control" name="consultancy_status[]" required></td>' +
+                 '<td><button type="button" class="btn btn-danger btn-sm remove-row">Remove</button required></td>' +
+                 '</tr>';
+    $('#consultancy').append(newRow);
+});
+
+// Function to remove row
+$(document).on('click', '.remove-row', function() {
+    $(this).closest('tr').remove();
+});
+
+    </script>
+    </body>
